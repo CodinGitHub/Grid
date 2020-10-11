@@ -1,0 +1,91 @@
+-------------------INITIAL STYLES---------------------
+body{
+    color: darkslategrey;
+    background-color: lightskyblue;
+}
+.container{
+    background-color: seagreen;
+}
+.items{
+    border: 1px solid;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    background-color: rosybrown;
+}
+
+------------------JUSTIFY - ALIGN (3 -6 )--------------------------
+.container{
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    /* grid-template-rows: 20px 50px 100px; */
+    /* column-gap: 20px;
+    row-gap: 20px; */
+    gap: 20px;
+    height: 500px;
+    justify-items: center;
+    align-items: center;
+}
+
+-----------------GRID LINES (18)-------------------------------
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 1fr 1fr 1fr 1fr 1fr 1fr */
+}
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.item5{
+    grid-column: 1 / 4;
+}
+.item8{
+    grid-column: 1 / span 3;
+}
+.item4{
+    grid-column-start: 6;
+    grid-row: 1 / 4;
+}
+.item11{
+    grid-area: 4 / 1 / 7 / 5;
+}
+
+
+-------------AUTOFILL - MINMAX (18)----------------------------
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+--------------------------------GRID AREAS NAME (5)------------
+.container{
+    display: grid;
+    grid-template-areas: 
+        'header     header  header  article'
+        'sidemenu   main    main    article'
+        'sidemenu   main    main    article'
+        'footer     footer  footer  footer'
+    ;
+}
+.item1{
+    grid-area: header;
+}
+.item2{
+    grid-area: article;
+}
+.item3{
+    grid-area: sidemenu;
+}
+.item4{
+    grid-area: main;
+}
+.item5{
+    grid-area: footer;
+}

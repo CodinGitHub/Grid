@@ -1,24 +1,4 @@
 .container{
     display: grid;
-    grid-template-areas: 
-        'header     header  header  article'
-        'sidemenu   main    main    article'
-        'sidemenu   main    main    article'
-        'footer     footer  footer  footer'
-    ;
-}
-.item1{
-    grid-area: header;
-}
-.item2{
-    grid-area: article;
-}
-.item3{
-    grid-area: sidemenu;
-}
-.item4{
-    grid-area: main;
-}
-.item5{
-    grid-area: footer;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
