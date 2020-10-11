@@ -1,0 +1,17 @@
+body{
+    color: darkslategrey;
+    background-color: lightskyblue;
+}
+.container{
+    background-color: seagreen;
+}
+.items{
+    border: 1px solid;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    background-color: rosybrown;
+}
